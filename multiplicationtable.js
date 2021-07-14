@@ -11,7 +11,7 @@ for(let i = 1; i <= 20; i++) {
     // multiply i with n
     let result = i * number;
     // display the result
-    console.log('${number} * ${i} = ${result}');
+    console.log(`${number} * ${i} = ${result}`);
 }
 else {console.log("The number " + number + "is nt a multiple of 3,5 or 7") }
 }
