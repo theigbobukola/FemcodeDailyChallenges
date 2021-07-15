@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> ABILITY TO DETERMINE IF A USER IS ELIGIBLE TO VOTE OR NOT </title>
+        </head>
+        <body> 
+            <script type="text/javascript">
+            let dob=prompt("Please enter your date of birth in the format dd/mm/yyyy", "01/10/1990");
+            while (dob.length<10){
+                dob=prompt("Enter a valid date of birth in the format dd/mm/yyyy", "01/10/1990");
+            }
+            let userDay=dob.slice(0,2);
+            let userMonth=dob.slice(3,5);
+            let userYear=dob.slice(6,10);
+            
+            let today = new Date();
+            let currentDay=today.getDate();
+            let currentMonth=today.getMonth()+1;
+            let currentYear=today.getFullYear();
+
+            if (currentYear - userYear >18){
+                document.write("You are eligible for voting on this platform")
+           } else if (currentYear - userYear==18){
+                if (currentMonth >userMonth){
+                document.write("You are eligible for voting on this platform")
+           } else if (currentMonth==userMonth){
+                if  (currentDay>=userDay){
+                    document.write("You are eligible for voting on this platform")
+                }else {
+                    document.write("sorry you are too small");
+                }
+            }else{
+                document.write("sorry you are too small");
+            }
+            }else{
+                document.write("sorry you are too small");
+        }
+            
+            </script>
+        </body>
+</html>
